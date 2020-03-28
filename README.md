@@ -1,29 +1,38 @@
-# README #
+# E-Church API #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+API para o aplicativo da E-Church
 
-### What is this repository for? ###
+## Iniciando a aplicação
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Configurações manuais
+    * Adicione o projeto na pasta do GOPATH
+        go get -u bitbucket.org/eChurchIPB/api-echurch
+        ln -s $GOPATH/src/bitbucket.org/eChurchIPB/api-echurch api
 
-### How do I get set up? ###
+* Gerenciador de dependências
+    * Pelo GO
+        go get -u github.com/golang/dep/cmd/dep
+        no arquivo .bashrc adicionar a "export PATH=$PATH:~/.go/bin/"
+    
+    * Ou instalar por script
+        curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+    * Instalando dependências
+        * dep ensure
 
-### Contribution guidelines ###
+## Todo
 
-* Writing tests
-* Code review
-* Other guidelines
+Arquitetura
+    [x] Definir qual será o framework
+    [] Definir qual o banco de dados
 
-### Who do I talk to? ###
+Aplicação
+    [x] Configurar o webservice
+    [] Conectar com o banco de dados
+    [] Adicionar CORS
+    [] Adicionar Authenticação por JWT
 
-* Repo owner or admin
-* Other community or team contact
+Infra-estrutura
+    [] Configurar o docker para realizar o build da aplicação
+    [] Configurar o docker para executar a aplicação
+    [] Configurar o docker para o banco de dados
