@@ -1,0 +1,4 @@
+*sublime**.lock
+vendor/
+*sublime*
+*.lock
